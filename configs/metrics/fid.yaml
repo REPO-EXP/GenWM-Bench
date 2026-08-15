@@ -1,0 +1,7 @@
+
+- name: "FIDMetric"
+  type: "FIDMetric"
+
+  behavior: "distribution"
+  batch_size: 50
+  dims: 2048

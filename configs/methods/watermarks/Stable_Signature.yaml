@@ -1,0 +1,11 @@
+name: "Stable_Signature"
+
+ldm_config: "data/models/stable-diffusion-v1-5/v1-inference.yaml"
+ldm_ckpt: "data/models/stable-diffusion-v1-5/v1-5-pruned-emaonly.ckpt"
+
+watermarked_vae_path: "data/models/Stable_Signature/sd2_decoder.pth"
+extractor_path: "data/models/Stable_Signature/dec_48b_whit.torchscript.pt"
+
+secret_config:
+  type: "bits"
+  length: 48

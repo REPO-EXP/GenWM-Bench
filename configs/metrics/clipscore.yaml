@@ -1,0 +1,7 @@
+
+- name: "CLIPScoreMetric"
+  type: "CLIPScoreMetric"
+
+  behavior: "alignment"
+  model_name: "ViT-B-32"
+  pretrained: "data/models/CLIP-ViT-B-32-laion2B-s34B-b79K/open_clip_pytorch_model.bin"

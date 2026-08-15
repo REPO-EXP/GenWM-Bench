@@ -1,0 +1,19 @@
+name: "GaussianShading"
+
+channel_copy: 1
+hw_copy: 8
+fpr: 1.0e-6
+user_number: 100000
+
+
+model_path: "data/models/stable-diffusion-v1-5" 
+
+num_inference_steps: 25   
+num_inversion_steps: 25   
+guidance_scale: 7.5       
+height: 512               
+width: 512                
+
+secret_config:
+  type: "bits"
+  length: 256

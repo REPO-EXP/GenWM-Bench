@@ -1,0 +1,60 @@
+
+import os
+import random
+import sys
+import time
+import warnings
+from getpass import getuser
+from socket import gethostname
+
+import numpy as np
+import torch
+
+import annotator.uniformer.mmcv as mmcv
+
+def get_host_info():
+    
+    host = ''
+    try:
+        host = f'{getuser()}@{gethostname()}'
+    except Exception as e:
+        warnings.warn(f'Host or user not found: {str(e)}')
+    finally:
+        return host
+
+def get_time_str():
+    return time.strftime('%Y%m%d_%H%M%S', time.localtime())
+
+def obj_from_dict(info, parent=None, default_args=None):
+    
+    assert isinstance(info, dict) and 'type' in info
+    assert isinstance(default_args, dict) or default_args is None
+    args = info.copy()
+    obj_type = args.pop('type')
+    if mmcv.is_str(obj_type):
+        if parent is not None:
+            obj_type = getattr(parent, obj_type)
+        else:
+            obj_type = sys.modules[obj_type]
+    elif not isinstance(obj_type, type):
+        raise TypeError('type must be a str or valid type, but '
+                        )
+    if default_args is not None:
+        for name, value in default_args.items():
+            args.setdefault(name, value)
+    return obj_type(**args)
+
+def set_random_seed(seed, deterministic=False, use_rank_shift=False):
+    
+    if use_rank_shift:
+        rank, _ = mmcv.runner.get_dist_info()
+        seed += rank
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    os.environ['PYTHONHASHSEED'] = str(seed)
+    if deterministic:
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False

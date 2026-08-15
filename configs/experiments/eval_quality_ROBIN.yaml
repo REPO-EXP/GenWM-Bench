@@ -1,0 +1,26 @@
+name: "Quality_Eval_ROBIN"
+output_dir: "outputs/quality_eval/ROBIN_results"
+seed: 42
+device: "cuda:0"
+
+max_samples: 10  
+batch_size: 1     
+inference_steps: 50
+
+model: "configs/models/sd_v2_1.yaml"
+method: "configs/methods/watermarks/ROBIN.yaml"
+dataset: "configs/datasets/coco.yaml"
+
+
+metrics:
+
+  - "configs/metrics/basic_group.yaml"
+
+
+  - "configs/metrics/clipscore.yaml"
+
+
+  - "configs/metrics/fid.yaml"
+
+
+  - "configs/metrics/dreamsim.yaml"  

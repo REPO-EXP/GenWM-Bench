@@ -1,0 +1,36 @@
+experiment_name: "Test_TreeRing"
+output_dir: "outputs/TreeRing_results"
+seed: 0
+device: "cuda:0"
+max_samples: 1
+batch_size: 1
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+  watermark_config: "configs/methods/watermarks/TreeRing.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+
+scheduler: "DDIM"
+generation_config:
+  num_inference_steps: 50      
+  guidance_scale: 7          
+  width: 512
+  height: 512
+
+
+attacks:
+  # - name: "GaussianNoise"
+  #   std: 0.1
+
+  # - name: "CropRescale"
+  #   scale: 0.95
+# attacks:
+#   - name: AdvEmbAttack
+#     encoder: klvae8 
+#     strength: 4.0
+#     steps: 50
+  - name: AdvEmbAttack
+    encoder: klvae16
+    strength: 4
+    steps: 50

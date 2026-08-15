@@ -1,0 +1,6 @@
+
+- name: "BasicQualityMetrics"
+  type: "BasicQualityMetrics"
+  behavior: "fidelity_group"
+  device: "cuda"
+  disable_lpips: False

@@ -1,0 +1,14 @@
+experiment_name: "Benchmark_RivaGan"
+output_dir: "outputs/RivaGan"
+seed: 42
+device: "cuda:0"
+max_samples: 5
+batch_size: 2
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+  watermark_config: "configs/methods/watermarks/RivaGan.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+attacks:
+  - name: "CropRescale"
+    scale: 0.9

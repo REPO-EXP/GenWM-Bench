@@ -1,0 +1,24 @@
+
+name: "ROBIN"
+
+wm_path: "data/models/ROBIN/optimized_wm5-30_embedding-step-2000.pt"
+wm_pathV1.5: "data/models/ROBIN/optimized_wm5-30_embedding-step-2000V1.5.pt"
+
+injection_steps: 35
+
+lguidance: 7.5
+
+w_pattern: "ring"
+w_mask_shape: "circle"
+
+w_up_radius: 30
+w_low_radius: 5
+
+w_channel: 3
+w_measurement: "l1_complex"
+w_injection: "complex"
+w_pattern_const: 0
+w_seed: 999999
+
+threshold_v15: 34.31
+threshold_v2: 52.24

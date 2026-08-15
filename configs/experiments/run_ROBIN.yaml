@@ -1,0 +1,21 @@
+experiment_name: "Test_ROBIN_Official"
+output_dir: "outputs/ROBIN_results"
+seed: 0
+device: "cuda:0"
+
+max_samples: 2
+batch_size: 2
+
+defaults:
+  model_config: "configs/models/sd_v2_1.yaml"
+  watermark_config: "configs/methods/watermarks/ROBIN.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+scheduler: "DPM++ 2M SDE"
+generation_config:
+  num_inference_steps: 50
+  guidance_scale: 7
+  width: 512
+  height: 512
+
+attacks:

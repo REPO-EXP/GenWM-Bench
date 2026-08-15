@@ -1,0 +1,40 @@
+experiment_name: "Test_PRC"
+output_dir: "outputs/PRC_results"
+seed: 44
+device: "cuda:0"
+max_samples: 1
+batch_size: 1  
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+
+  watermark_config: "configs/methods/watermarks/PRC.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+
+attacks:
+  # - name: DiffusionRegeneration
+  #   strength: 0.15
+  #   scheduler: "Euler a"
+
+  - name: "Brightness"
+    brightness: 1.2
+    
+  # - name: "CropRescale"
+  #   scale: 0.95
+
+  # - name: "JPEG"
+  #   quality: 50
+
+  # - name: "GaussianNoise"
+  #   std: 0.1
+
+    # - name: "Rinse-4xDiff" 
+    #   strength: 0.2
+    #   scheduler: "Euler a"
+    #   model_id: "data/models/stable-diffusion-2-1-base"
+
+    # - name: AdvEmbAttack
+    #   encoder: klvae8
+    #   strength: 4
+    #   steps: 25

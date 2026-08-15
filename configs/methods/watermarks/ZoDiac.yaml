@@ -1,0 +1,17 @@
+name: "ZoDiac"
+
+model_path: "data/models/stable-diffusion-v1-5"
+
+w_type: 'single'
+w_channel: 3
+w_radius: 10
+w_seed: 10
+num_inference_steps: 25
+
+iters: 50
+loss_weights: [10.0, 0.1, 1.0, 0.0]
+lr: 0.01
+
+ssim_threshold: 0.92
+
+detect_threshold: 0.97

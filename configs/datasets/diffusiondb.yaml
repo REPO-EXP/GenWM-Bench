@@ -1,0 +1,4 @@
+name: "HuggingFaceDataset"
+source: "poloclub/diffusiondb"
+split: "train"
+prompt_key: "prompt"

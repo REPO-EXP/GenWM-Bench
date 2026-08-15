@@ -1,0 +1,41 @@
+experiment_name: "Test_SleeperMark"
+output_dir: "outputs/SleeperMark_results"
+seed: 44
+device: "cuda:0"
+max_samples: 4
+batch_size: 1  
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+
+  watermark_config: "configs/methods/watermarks/SleeperMark.yaml"
+  # dataset_config: "configs/datasets/hf_demo.yaml"
+  dataset_config: "configs/datasets/text.yaml"
+
+
+attacks:
+  # - name: DiffusionRegeneration
+  #   strength: 0.3
+  #   scheduler: "Euler a"
+    
+  # - name: "CropRescale"
+  #   scale: 0.8
+
+  # - name: "GaussianNoise"
+  #   std: 0.3
+
+  # - name: "JPEG"
+  #   quality: 50
+
+  # - name: "GaussianNoise"
+  #   std: 0.1
+
+    - name: "Rinse-4xDiff" 
+      strength: 0.4
+      scheduler: "Euler a"
+      model_id: "data/models/stable-diffusion-2-1-base"
+
+    # - name: AdvEmbAttack
+    #   encoder: klvae8
+    #   strength: 4
+    #   steps: 25

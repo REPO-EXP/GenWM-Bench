@@ -1,0 +1,16 @@
+experiment_name: "Test_StableSig"
+output_dir: "outputs/StableSig_results"
+seed: 0
+device: "cuda:0"
+max_samples: 5
+batch_size: 2
+
+defaults:
+
+  model_config: "configs/models/sd_v1_5.yaml" 
+  watermark_config: "configs/methods/watermarks/Stable_Signature.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+attacks:
+  - name: "CropRescale"
+    scale: 0.5

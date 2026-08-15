@@ -1,0 +1,2 @@
+name: "TxtFileDataset"
+source: "data/datasets/textfile/pokemon_prompts.txt" 

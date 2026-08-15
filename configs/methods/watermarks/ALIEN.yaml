@@ -1,0 +1,16 @@
+name: "ALIEN"
+
+encoder_path: "data/models/ALIEN/encoder.pth"
+decoder_path: "data/models/ALIEN/decoder.pth"
+
+secret_config:
+  type: "bits"
+  length: 48
+latent_channels: 4
+resolution: 64
+
+wm_injection_start_step: 1
+wm_injection_end_step: 50
+num_inference_steps: 50
+
+wm_weight: 2.5

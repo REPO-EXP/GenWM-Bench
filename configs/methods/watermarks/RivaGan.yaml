@@ -1,0 +1,6 @@
+name: "ImWatermarkWrapper"
+algorithm_type: "RivaGan"
+scale: 1.0
+secret_config:
+  type: "bits"
+  length: 32

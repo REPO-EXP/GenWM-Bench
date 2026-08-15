@@ -1,0 +1,15 @@
+experiment_name: "Benchmark_FSWatermark"
+output_dir: "outputs/FSwatermark"
+seed: 0
+device: "cuda:0"
+max_samples: 5
+batch_size: 2
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+  watermark_config: "configs/methods/watermarks/FSwatermark.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+attacks:
+  - name: "GaussianBlur"
+    radius: 1.0

@@ -1,0 +1,13 @@
+name: "FSWatermark"
+
+
+model_path: "data/models/stable-diffusion-v1-5"
+
+
+watermarked_vae_path: "data/models/FSwatermark/vae.pth"
+encoder_path: "data/models/FSwatermark/encoder.pth"
+decoder_path: "data/models/FSwatermark/decoder.pth"
+
+secret_config:
+  type: "bits"
+  length: 100

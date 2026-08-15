@@ -1,0 +1,29 @@
+experiment_name: "Test_ALIEN"
+output_dir: "outputs/ALIEN_results"
+seed: 42
+device: "cuda:0"
+max_samples: 10
+batch_size: 1  
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+  watermark_config: "configs/methods/watermarks/ALIEN.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+attacks:
+  # - name: DiffusionRegeneration
+  #   strength: 0.4
+  #   scheduler: "Euler a"
+    
+  # - name: "CropRescale"
+  #   scale: 0.95
+
+    # - name: "Rinse-4xDiff" 
+    #   strength: 0.2
+    #   scheduler: "Euler a"
+    #   model_id: "data/models/stable-diffusion-2-1-base"
+
+    # - name: AdvEmbAttack
+    #   encoder: klvae8
+    #   strength: 1
+    #   steps: 50

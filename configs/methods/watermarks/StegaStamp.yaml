@@ -1,0 +1,8 @@
+name: "StegaStamp"
+
+encoder_path: "data/models/StegaStamp/encoder.pth"
+decoder_path: "data/models/StegaStamp/decoder.pth"
+
+secret_config:
+  type: "bits"
+  length: 100

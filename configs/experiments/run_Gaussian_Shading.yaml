@@ -1,0 +1,20 @@
+
+experiment_name: "Benchmark_Gaussian_Shading"
+output_dir: "outputs/Gaussian_Shading"
+
+seed: 42
+device: "cuda:0"
+max_samples: 1
+batch_size: 1
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+  watermark_config: "configs/methods/watermarks/Gaussian_Shading.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+attacks:
+
+  - name: AdvEmbAttack
+    encoder: klvae8
+    strength: 4
+    steps: 50

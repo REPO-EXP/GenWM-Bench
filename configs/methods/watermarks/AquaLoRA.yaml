@@ -1,0 +1,10 @@
+name: "AquaLoRA"
+
+aqualora_model_path: "data/models/AquaLoRA/ppft_trained/"
+
+secret_config:
+  type: "bits"
+  length: 48
+
+# extra_lora_path: "data/models/v1-5Lora/speed_lcm_sd15_400.safetensors"
+# extra_lora_scale: 1

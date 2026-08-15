@@ -1,0 +1,14 @@
+
+import torch
+import torch.nn as nn
+
+from .registry import ACTIVATION_LAYERS
+
+@ACTIVATION_LAYERS.register_module()
+class Swish(nn.Module):
+    
+    def __init__(self):
+        super(Swish, self).__init__()
+
+    def forward(self, x):
+        return x * torch.sigmoid(x)

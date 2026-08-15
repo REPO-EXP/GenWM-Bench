@@ -1,0 +1,6 @@
+
+name: "SleeperMark"
+unet_dir: "data/models/SleeperMark/unet"
+pretrained_wm_dir: "data/models/SleeperMark/pretrainedWM"
+trigger: "*[Z]& "
+base_model_path: "data/models/stable-diffusion-v1-5"

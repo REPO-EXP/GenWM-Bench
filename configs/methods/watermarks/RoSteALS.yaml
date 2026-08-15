@@ -1,0 +1,10 @@
+name: "RoSteALS"
+
+rosteals_config_path: "./data/models/RoSteALS/VQ4_mir_inference.yaml"
+rosteals_ckpt_path: "./data/models/RoSteALS/RoSteALS_Model/epoch=000017-step=000449999.ckpt"
+
+max_image_weight_ratio: 10.0
+
+secret_config:
+  type: "bits"
+  length: 100

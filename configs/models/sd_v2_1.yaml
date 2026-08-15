@@ -1,0 +1,3 @@
+name: "StableDiffusion"
+model_id: "data/models/stable-diffusion-2-1-base"
+dtype: "fp32"

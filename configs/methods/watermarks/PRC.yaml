@@ -1,0 +1,11 @@
+name: "PRC"
+fpr: 1e-5
+prc_t: 3
+solver_order: 1
+variance: 1.5
+key_path: "./keys/my_prc_key.pkl"
+model_path: "data/models/stable-diffusion-v1-5"
+secret_length: 512
+secret_config:
+  type: "bits"
+  length: 512

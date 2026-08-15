@@ -1,0 +1,36 @@
+experiment_name: "Test_AquaLoRA"
+output_dir: "outputs/AquaLoRA"
+seed: 42
+device: "cuda:0"
+max_samples: 10
+batch_size: 2
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+  watermark_config: "configs/methods/watermarks/AquaLoRA.yaml"
+  # dataset_config: "configs/datasets/hf_demo.yaml"
+  dataset_config: "configs/datasets/text.yaml"
+  # dataset_config: "configs/datasets/pokemon_text.yaml"
+
+# attacks:
+#   - name: "RandomDrop"
+#     ratio: 0.3
+
+# scheduler: "LCM"
+
+# generation_config:
+#   num_inference_steps: 50       
+#   guidance_scale: 7          
+#   width: 512
+#   height: 512
+#   # extra_lora_path: "data/models/v1-5Lora/style_pokemon_20e.safetensors"
+#   extra_lora_path: "data/models/v1-5Lora/style_animate_sd15.safetensors"
+#   extra_lora_scale: 1
+
+# generation_config:
+#   num_inference_steps: 8       
+#   guidance_scale: 1.5          
+#   width: 512
+#   height: 512
+#   # extra_lora_path: "data/models/v1-5Lora/speed_lcm_sd15_400.safetensors"
+#   extra_lora_scale: 1

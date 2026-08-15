@@ -1,0 +1,18 @@
+experiment_name: "Test_ZoDiac"
+output_dir: "outputs/ZoDiac_results"
+seed: 0
+device: "cuda:0"
+max_samples: 1
+batch_size: 1  
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+  watermark_config: "configs/methods/watermarks/ZoDiac.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+attacks:
+  # - name: "GaussianNoise"
+  #   std: 0.2
+
+  # - name: "CropRescale"
+  #   scale: 0.95

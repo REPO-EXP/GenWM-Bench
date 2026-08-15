@@ -1,0 +1,4 @@
+name: "HuggingFaceDataset"
+source: "Gustavosta/Stable-Diffusion-Prompts"
+split: "test"
+prompt_key: "Prompt"

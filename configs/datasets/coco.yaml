@@ -1,0 +1,3 @@
+name: "COCODataset"
+source: "data/datasets/coco" 
+root_dir: "data/datasets/coco/ground_truth"

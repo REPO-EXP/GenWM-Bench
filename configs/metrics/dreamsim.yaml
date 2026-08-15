@@ -1,0 +1,7 @@
+
+- name: "DreamSimMetric"
+  type: "DreamSimMetric"
+
+  behavior: "vs_gt"
+  model_type: "ensemble"
+  cache_dir: "./data/models/dreamsim_models/"

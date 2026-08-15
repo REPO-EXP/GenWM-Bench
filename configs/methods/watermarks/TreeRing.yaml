@@ -1,0 +1,9 @@
+name: "TreeRing"
+channel: 0
+radius: 10
+
+fixed_secret: 123456
+
+secret_config:
+  type: "seed"
+  range_max: 100000

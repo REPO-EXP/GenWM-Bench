@@ -1,0 +1,6 @@
+name: "ImWatermarkWrapper"
+algorithm_type: "DwtDct"
+scale: 36
+secret_config:
+  type: "bits"
+  length: 48

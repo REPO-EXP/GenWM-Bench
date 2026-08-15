@@ -1,0 +1,15 @@
+experiment_name: "Benchmark_DwtDctSvd"
+output_dir: "outputs/DwtDctSvd"
+seed: 0
+device: "cuda:0"
+max_samples: 5
+batch_size: 2
+
+defaults:
+  model_config: "configs/models/sd_v1_5.yaml"
+  watermark_config: "configs/methods/watermarks/DwtDctSvd.yaml"
+  dataset_config: "configs/datasets/hf_demo.yaml"
+
+# attacks:
+#   - name: "JPEG"
+#     quality: 50
